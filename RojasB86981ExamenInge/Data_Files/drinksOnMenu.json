@@ -1,0 +1,26 @@
+﻿[
+	{
+		"Image": "drink-1.jpg",
+		"Name": "LA MAÑANA NO AMANEZCO",
+		"Description": "",
+		"Price": "1000",
+		"Accompaniment": "",
+		"Ingredients": ""
+	},
+	{
+		"Image": "drink-2.jpg",
+		"Name": "LA LUIS BARQUERO VILLALOBOS",
+		"Description": "",
+		"Price": "1200",
+		"Accompaniment": "",
+		"Ingredients": ""
+	},
+	{
+		"Image": "drink-3.jpg",
+		"Name": "LA UNA MÁS Y LLAMO A MI EX",
+		"Description": "",
+		"Price": "2000",
+		"Accompaniment": "",
+		"Ingredients": ""
+	}
+]

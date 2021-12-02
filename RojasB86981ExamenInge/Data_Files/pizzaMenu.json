@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Image": "pizza-1.jpg",
+    "Name": "LA PATUCHINI",
+    "Description": "Es la pizza más antigua, con salsa de tomate, orégano, ajo, aceite de oliva, albahaca y una pizca de sal. Su principal característica es que no tiene queso.",
+    "Price": "1500",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, hongos, queso badilla"
+  },
+  {
+    "Image": "pizza-2.jpg",
+    "Name": "LA FETUCHINI",
+    "Description": "La FETUCHINI recuerda la bandera italiana: verde por las hojas de albahaca, blanco por el queso mozzarella y rojo por los tomates",
+    "Price": "2250",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, hojas de albahaca, queso ricotta"
+  },
+  {
+    "Image": "pizza-3.jpg",
+    "Name": "LA MADONA",
+    "Description": "Leccarsi le dita deliziosa",
+    "Price": "3500",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, cebolla, queso mozzarella"
+  }
+]
