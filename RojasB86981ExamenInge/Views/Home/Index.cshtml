@@ -1,245 +1,117 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Segnini's Pizza";
 }
 <header>
-    
+    <title>@ViewBag.Title</title>
 </header>
 <body>
     <div class="card" style="margin-top: 25px;">
         <h3 class="card-header">
-            <a href="/News/ListNews" class="display-6 text-primary">Pizza</a>
+            <a href="#" class="display-6 text-primary">Pizza</a>
         </h3>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/burger-1.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                @foreach (var pizza in ViewBag.PizzasOnMenu)
+                {
+                    <div class="col-sm">
+                        <div class="card h-100 bg-light">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <div class="embed-responsive-item">
+                                    <img src="~/images/@pizza.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    <h2 class="card-title">@pizza.Name</h2>
+                                </p>
+                                <p>@pizza.Ingredients</p>
+                            </div>
+                            <div class="card-body">
+                                
+                                <span style="color:red;float:right; font-size:x-large">₡@pizza.Price</span>
+                               
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">El precio no incluye el i.v.a</small>
+                                <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
                             </div>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">Le Cunichini</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/burger-2.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">LE PANUCHINI</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/burger-3.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">LU PUPULINI</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                }
         </div>
     </div>
 
     <div class="card" style="margin-top: 25px;">
         <h3 class="card-header">
-            <a href="/News/ListNews" class="display-6 text-primary">Combos</a>
+            <a href="#" class="display-6 text-primary">Hamburguesa</a>
         </h3>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/burger-1.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                @foreach (var burger in ViewBag.BurgersOnMenu)
+                {
+                    <div class="col-sm">
+                        <div class="card h-100 bg-light">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <div class="embed-responsive-item">
+                                    <img src="~/images/@burger.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    <h2 class="card-title">@burger.Name</h2>
+                                </p>
+                                <p>Acompañado con @burger.Accompaniment</p>
+                                <p>@burger.Ingredients</p>
+                            </div>
+                            <div class="card-body">
+
+                                <span style="color:red;float:right; font-size:x-large">₡@burger.Price</span>
+                               
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">El precio no incluye el i.v.a</small>
+                                <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
                             </div>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">La malcriada</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/burger-2.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">La mamalona</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/burger-3.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">La artesana</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
     <div class="card" style="margin-top: 25px;">
         <h3 class="card-header">
-            <a href="/News/ListNews" class="display-6 text-primary">Otros</a>
+            <a href="#" class="display-6 text-primary">Bebidas</a>
         </h3>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/drink-1.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                @foreach (var drinks in ViewBag.DrinksOnMenu)
+                {
+                    <div class="col-sm">
+                        <div class="card h-100 bg-light">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <div class="embed-responsive-item">
+                                    <img src="~/images/@drinks.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    <h2 class="card-title">@drinks.Name</h2>
+                                </p>
+                                
+                            </div>
+                            <div class="card-body">
+
+                                <span style="color:red;float:right; font-size:x-large">₡@drinks.Price</span>
+
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">El precio no incluye el i.v.a</small>
+                                <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
                             </div>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">El descanso eterno</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
                     </div>
-                </div>
+                }
 
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/drink-2.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">La borrar cassette</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card h-100 bg-light">
-                        <div class="embed-responsive embed-responsive-4by3">
-                            <div class="embed-responsive-item">
-                                <img src="~/images/drink-3.jpg" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                            </div>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <p class="card-text">
-                                <h2 class="card-title">La recuerdo a mi ex</h2>
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
-                            <span style="color:red">₡2900</span>
-
-                            <small class="text-muted">El precio no incluye el i.v.a</small>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

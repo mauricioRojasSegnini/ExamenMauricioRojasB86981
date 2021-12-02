@@ -1,0 +1,26 @@
+﻿[
+    {
+        "Image": "burger-1.jpg",
+        "Name": "LA MALCRIADA",
+        "Description": "Una hamburguesa que no se deja comersh",
+        "Price": "3250",
+        "Accompaniment": "papas bravas o patacones",
+        "Ingredients": "pan, carne, queso, lechuga, tomate y salsas."
+    },
+    {
+        "Image": "burger-2.jpg",
+        "Name": "LA MALQUERIDA",
+        "Description": "La mejor carne a la parrilla",
+        "Price": "3875",
+        "Accompaniment": "papas bravas o patacones",
+        "Ingredients": "pan, carne, queso, lechuga, tomate y salsas."
+    },
+    {
+        "Image": "burger-3.jpg",
+        "Name": "LA CHANCHA",
+        "Description": "Una chanchada pero deliciosa",
+        "Price": "3550",
+        "Accompaniment": "papas bravas o patacones",
+        "Ingredients": "pan, carne, queso, lechuga, tomate y salsas."
+    }
+]
