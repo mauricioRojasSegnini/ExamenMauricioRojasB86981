@@ -129,6 +129,7 @@
     <Compile Include="Models\PizzaMenuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\styles.css" />
+    <Content Include="Content\whatsappIcon.css" />
     <Content Include="Views\Home\Location.cshtml" />
   </ItemGroup>
   <ItemGroup>
