@@ -37,5 +37,10 @@ namespace RojasB86981ExamenInge.Controllers
 
             return View();
         }
+
+        public ActionResult Location()
+        {
+            return View();
+        }
     }
 }

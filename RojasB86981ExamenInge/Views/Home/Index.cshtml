@@ -1,10 +1,14 @@
 ﻿@{
     ViewBag.Title = "Segnini's Pizza";
 }
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <title>@ViewBag.Title</title>
-</header>
+</head>
 <body>
+   
+
     <div class="card" style="margin-top: 25px;">
         <h3 class="card-header">
             <a href="#" class="display-6 text-primary">Pizza</a>
@@ -27,46 +31,9 @@
                                 <p>@pizza.Ingredients</p>
                             </div>
                             <div class="card-body">
-                                
+
                                 <span style="color:red;float:right; font-size:x-large">₡@pizza.Price</span>
-                               
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">El precio no incluye el i.v.a</small>
-                                <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
-                            </div>
-                        </div>
-                    </div>
-                }
-        </div>
-    </div>
 
-    <div class="card" style="margin-top: 25px;">
-        <h3 class="card-header">
-            <a href="#" class="display-6 text-primary">Hamburguesa</a>
-        </h3>
-        <div class="card-body">
-            <div class="row">
-                @foreach (var burger in ViewBag.BurgersOnMenu)
-                {
-                    <div class="col-sm">
-                        <div class="card h-100 bg-light">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <div class="embed-responsive-item">
-                                    <img src="~/images/@burger.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <p class="card-text">
-                                    <h2 class="card-title">@burger.Name</h2>
-                                </p>
-                                <p>Acompañado con @burger.Accompaniment</p>
-                                <p>@burger.Ingredients</p>
-                            </div>
-                            <div class="card-body">
-
-                                <span style="color:red;float:right; font-size:x-large">₡@burger.Price</span>
-                               
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">El precio no incluye el i.v.a</small>
@@ -77,46 +44,82 @@
                 }
             </div>
         </div>
-    </div>
-    <div class="card" style="margin-top: 25px;">
-        <h3 class="card-header">
-            <a href="#" class="display-6 text-primary">Bebidas</a>
-        </h3>
-        <div class="card-body">
-            <div class="row">
-                @foreach (var drinks in ViewBag.DrinksOnMenu)
-                {
-                    <div class="col-sm">
-                        <div class="card h-100 bg-light">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <div class="embed-responsive-item">
-                                    <img src="~/images/@drinks.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+
+        <div class="card" style="margin-top: 25px;">
+            <h3 class="card-header">
+                <a href="#" class="display-6 text-primary">Hamburguesa</a>
+            </h3>
+            <div class="card-body">
+                <div class="row">
+                    @foreach (var burger in ViewBag.BurgersOnMenu)
+                    {
+                        <div class="col-sm">
+                            <div class="card h-100 bg-light">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <div class="embed-responsive-item">
+                                        <img src="~/images/@burger.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">
+                                        <h2 class="card-title">@burger.Name</h2>
+                                    </p>
+                                    <p>Acompañado con @burger.Accompaniment</p>
+                                    <p>@burger.Ingredients</p>
+                                </div>
+                                <div class="card-body">
+
+                                    <span style="color:red;float:right; font-size:x-large">₡@burger.Price</span>
+
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">El precio no incluye el i.v.a</small>
+                                    <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
                                 </div>
                             </div>
-                            <div class="card-body d-flex flex-column">
-                                <p class="card-text">
-                                    <h2 class="card-title">@drinks.Name</h2>
-                                </p>
-                                
-                            </div>
-                            <div class="card-body">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 25px;">
+            <h3 class="card-header">
+                <a href="#" class="display-6 text-primary">Bebidas</a>
+            </h3>
+            <div class="card-body">
+                <div class="row">
+                    @foreach (var drinks in ViewBag.DrinksOnMenu)
+                    {
+                        <div class="col-sm">
+                            <div class="card h-100 bg-light">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <div class="embed-responsive-item">
+                                        <img src="~/images/@drinks.Image" alt="Alternate Text" class="img-fluid w-100" style="max-height: 180px;" />
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">
+                                        <h2 class="card-title">@drinks.Name</h2>
+                                    </p>
 
-                                <span style="color:red;float:right; font-size:x-large">₡@drinks.Price</span>
+                                </div>
+                                <div class="card-body">
 
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">El precio no incluye el i.v.a</small>
-                                <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
+                                    <span style="color:red;float:right; font-size:x-large">₡@drinks.Price</span>
+
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">El precio no incluye el i.v.a</small>
+                                    <p class="card-text" style="float:right"> <a href="#" class="btn btn-primary">Ordenar</a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
+                    }
+
+                </div>
 
             </div>
         </div>
     </div>
-
-
-
-
 </body>
+</html>
