@@ -16,10 +16,10 @@ namespace RojasB86981ExamenInge.Controllers
         public ActionResult Index()
         {
             List<PizzaMenuModel> pizzaMenu = Json_ContentParser.GetContentsFromJson<PizzaMenuModel>("pizzaMenu.json", Json_ContentParser.GetProductsOnMenuFromJson);
-            ViewBag.PizzasOnMenu = pizzaMenu;
             List<PizzaMenuModel> burgerMenu = Json_ContentParser.GetContentsFromJson<PizzaMenuModel>("burgersOnMenu.json", Json_ContentParser.GetProductsOnMenuFromJson);
-            ViewBag.BurgersOnMenu = burgerMenu;
             List<PizzaMenuModel> drinks = Json_ContentParser.GetContentsFromJson<PizzaMenuModel>("drinksOnMenu.json", Json_ContentParser.GetProductsOnMenuFromJson);
+            ViewBag.PizzasOnMenu = pizzaMenu;
+            ViewBag.BurgersOnMenu = burgerMenu;
             ViewBag.DrinksOnMenu = drinks;
             return View();
         }
@@ -39,6 +39,11 @@ namespace RojasB86981ExamenInge.Controllers
         }
 
         public ActionResult Location()
+        {
+            return View();
+        }
+
+        public ActionResult OurHistory()
         {
             return View();
         }

@@ -130,7 +130,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\whatsappIcon.css" />
+    <Content Include="images\mauSombrero.png" />
     <Content Include="Views\Home\Location.cshtml" />
+    <Content Include="Views\Home\OurHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
