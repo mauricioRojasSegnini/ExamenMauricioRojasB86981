@@ -122,17 +122,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <None Include="Data_Files\burgersOnMenu.json" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\JsonContentParser.cs" />
     <Compile Include="Models\PizzaMenuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\ShoppingCartStyle.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\whatsappIcon.css" />
+    <Content Include="images\carbonara.jpg" />
+    <Content Include="images\diávola.jpg" />
+    <Content Include="images\margarita.jpg" />
     <Content Include="images\mauSombrero.png" />
+    <Content Include="images\napolitana.jpg" />
+    <Content Include="Scripts\ShoppingCart.js" />
     <Content Include="Views\Home\Location.cshtml" />
     <Content Include="Views\Home\OurHistory.cshtml" />
+    <Content Include="Views\ShoppingCart\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />

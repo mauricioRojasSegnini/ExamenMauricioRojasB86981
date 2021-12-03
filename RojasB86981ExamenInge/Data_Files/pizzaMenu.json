@@ -1,26 +1,38 @@
 ﻿[
   {
-    "Image": "pizza-1.jpg",
-    "Name": "LA PATUCHINI",
+    "Image": "margarita.jpg",
+    "Name": "Margarita",
+    "Tag": "margarita",
     "Description": "Es la pizza más antigua, con salsa de tomate, orégano, ajo, aceite de oliva, albahaca y una pizca de sal. Su principal característica es que no tiene queso.",
-    "Price": "1500",
+    "Price": "15000",
     "Accompaniment ": "",
     "Ingredients": "salsa de tomate, hongos, queso badilla"
   },
   {
-    "Image": "pizza-2.jpg",
-    "Name": "LA FETUCHINI",
+    "Image": "napolitana.jpg",
+    "Name": "Napolitana",
+    "Tag": "napolitana",
     "Description": "La FETUCHINI recuerda la bandera italiana: verde por las hojas de albahaca, blanco por el queso mozzarella y rojo por los tomates",
-    "Price": "2250",
+    "Price": "20000",
     "Accompaniment ": "",
     "Ingredients": "salsa de tomate, hojas de albahaca, queso ricotta"
   },
   {
-    "Image": "pizza-3.jpg",
-    "Name": "LA MADONA",
+    "Image": "carbonara.jpg",
+    "Name": "Carbonara",
+    "Tag": "carbonara",
     "Description": "Leccarsi le dita deliziosa",
-    "Price": "3500",
+    "Price": "25000",
     "Accompaniment ": "",
     "Ingredients": "salsa de tomate, cebolla, queso mozzarella"
+  },
+  {
+    "Image": "diávola.jpg",
+    "Name": "Diávola",
+    "Tag": "diávola",
+    "Description": "Simplemente deliziosa",
+    "Price": "23000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, chile, queso mozzarella"
   }
 ]
