@@ -34,5 +34,24 @@
     "Price": "23000",
     "Accompaniment ": "",
     "Ingredients": "salsa de tomate, chile, queso mozzarella"
+  },
+  {
+    "Image": "lesegnine.jpg",
+    "Name": "Le Segnine",
+    "Tag": "lesegnine",
+    "Description": "Simplemente mamamadítzima",
+    "Price": "23000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, una vara verde, queso mozzarella"
+  },
+  {
+    "Image": "maurizien.jpg",
+    "Name": "La Maurizien",
+    "Tag": "maurizien",
+    "Description": "Multo bella",
+    "Price": "21000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, tomate, queso mozzarella"
   }
+
 ]

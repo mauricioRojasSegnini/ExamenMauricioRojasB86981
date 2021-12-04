@@ -206,9 +206,9 @@
     <Content Include="images\pizza-2.jpg" />
     <Content Include="images\pizza-3.jpg" />
     <Content Include="images\pizza-4.jpg" />
-    <Content Include="images\pizza-5.jpg" />
-    <Content Include="images\pizza-6.jpg" />
-    <Content Include="images\pizza-7.jpg" />
+    <Content Include="images\lesegnine.jpg" />
+    <Content Include="images\maurizien.jpg" />
+    <Content Include="images\fetuchini.jpg" />
     <Content Include="images\pizza-8.jpg" />
     <Content Include="images\segninis pizza.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />

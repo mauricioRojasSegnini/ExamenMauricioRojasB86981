@@ -30,7 +30,7 @@
 
 .ProductsContainer,
 .container-products {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .add-cart {
-    margin-bottom: -15px;
+    margin-bottom: -50px;
     position: absolute;
     width: 100%;
     background-color: #00a652;

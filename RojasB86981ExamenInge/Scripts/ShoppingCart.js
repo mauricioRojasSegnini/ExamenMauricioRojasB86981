@@ -24,6 +24,25 @@ let products = [
         tag: "diávola",
         price: 25000,
         inCart: 0
+    },
+    {
+        name: "drink-1",
+        tag: "drink-1",
+        price: 1000,
+        inCart: 0
+    },
+    {
+        name: "drink-2",
+        tag: "drink-2",
+        price: 700,
+        inCart: 0
+    }
+    ,
+    {
+        name: "drink-3",
+        tag: "drink-3",
+        price: 2000,
+        inCart: 0
     }
 ];
 
