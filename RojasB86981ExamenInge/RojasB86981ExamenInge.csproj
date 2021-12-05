@@ -140,12 +140,14 @@
     <Content Include="images\mauSombrero.png" />
     <Content Include="images\napolitana.jpg" />
     <Content Include="images\Tupizza.png" />
+    <Content Include="Scripts\homeDelivery.js" />
     <Content Include="Scripts\NewPizzaScript.js" />
     <Content Include="Scripts\ShoppingCart.js" />
     <Content Include="Views\Home\Location.cshtml" />
     <Content Include="Views\Home\OurHistory.cshtml" />
     <Content Include="Views\ShoppingCart\Cart.cshtml" />
     <Content Include="Views\Pizza\NewPizza.cshtml" />
+    <Content Include="Views\ShoppingCart\Shipping.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />

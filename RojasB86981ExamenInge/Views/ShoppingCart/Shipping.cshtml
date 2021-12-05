@@ -1,0 +1,59 @@
+﻿<head>
+    <title>Entrega a domicilio</title>
+</head>
+
+<body>
+    <div class="container" style="height: 100%">
+        <div class="card-body">
+            <p class="card-text">
+                <h2>Dirección de envío</h2>
+            </p>
+            <hr />
+            <div class="col-8 offset-2">
+                <div class="card rounded-3 bg-light">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="small-font fw-bold"> Provincia</span>
+                                <select id="province" class="form-select">
+                                </select>
+                            </div>
+
+                            <div class="col-4">
+                                <span class="small-font fw-bold"> Cantón</span>
+                                <select id="canton" class="form-select">
+                                    <option selected>- Sin selección -</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4">
+                                <span class="small-font fw-bold"> Distrito</span>
+                                <select id="district" class="form-select">
+                                    <option selected>- Sin selección -</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <span class="small-font fw-bold"> Dirección exacta</span>
+                                <input id="exactDirection" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <span class="small-font fw-bold"> Otras señas (opcional)</span>
+                                <input id="additionalDirections" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    @Html.ActionLink("Finalizar", "Catalog", "EducationalActivity", "", new { @id = "submit", @class = "btn btn-info mt-5 col-3 offset-4" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/homeDelivery.js" type="text/javascript"></script>
+</body>
