@@ -1,79 +1,9 @@
 let carts = document.querySelectorAll('.add-cart');
+var products;
 
-let products = [ 
-    {
-        name: "Margarita",
-        tag: "margarita",
-        price: 15000,
-        inCart: 0
-    },
-    {
-        name: "Napolitana",
-        tag: "napolitana",
-        price: 20000,
-        inCart: 0
-    },
-    {
-        name: "Carbonara",
-        tag: "carbonara",
-        price: 5000,
-        inCart: 0
-    },
-    {
-        name: "Diávola",
-        tag: "diávola",
-        price: 9000,
-        inCart: 0
-    },
-    {
-        name: "Le Segnine",
-        tag: "lesegnine",
-        price: 20000,
-        inCart: 0
-    },
-    {
-        name: "La Maurizien",
-        tag: "lamaurizien",
-        price: 22000,
-        inCart: 0
-    },
-    {
-        name: "LA MALCRIADA",
-        tag: "lamalcriada",
-        price: 10500,
-        inCart: 0
-    },
-    {
-        name: "LA MALQUERIDA",
-        tag: "lamalquerida",
-        price: 20000,
-        inCart: 0
-    },
-    {
-        name: "LA CHANCHA",
-        tag: "lachancha",
-        price: 1000,
-        inCart: 0
-    },
-    {
-        name: "LA MAÑANA NO AMANEZCO",
-        tag: "lamañananoamanezco",
-        price: 1000,
-        inCart: 0
-    },
-    {
-        name: "LA LUIS BARQUERO VILLALOBOS",
-        tag: "laluisbarquerovillalobos",
-        price: 700,
-        inCart: 0
-    },
-    {
-        name: "LA UNA MÁS Y LLAMO A MI EX",
-        tag: "launamásyllamoamiex",
-        price: 2000,
-        inCart: 0
-    }
-];
+function setMenu(personalPizzas) {
+    products = personalPizzas;
+}
 
 for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {

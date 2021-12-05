@@ -77,11 +77,11 @@
                                     <a class="add-cart cart1" href="#">Agregar</a>
                                     <input type="hidden" value="15" />
                                 </div>
-                                <h3 style="margin-left:5%">@pizza.Name</h3>
+                                <h3 style="margin-left:5%">@pizza.name</h3>
                             </div>
                             <div class="card-body">
                                 <p>@pizza.Ingredients</p>
-                                <span style="color:red;float:right; font-size:x-large">₡@pizza.Price </span>
+                                <span style="color:red;float:right; font-size:x-large">₡@pizza.price </span>
                             </div>
                         </div>
                     </div>
@@ -109,12 +109,12 @@
                                         <a class="add-cart cart1" href="#">Agregar</a>
                                         <input type="hidden" value="15" />
                                     </div>
-                                    <h3 style="margin-left:5%">@burgers.Name</h3>
+                                    <h3 style="margin-left:5%">@burgers.name</h3>
                                 </div>
                                 <div class="card-body">
                                     <p>@burgers.Ingredients</p>
 
-                                    <span style="color:red;float:right; font-size:x-large">₡@burgers.Price </span>
+                                    <span style="color:red;float:right; font-size:x-large">₡@burgers.price </span>
                                 </div>
                             </div>
                         </div>
@@ -144,12 +144,12 @@
                                         <a class="add-cart cart1" href="#">Agregar</a>
                                         <input type="hidden" value="15" />
                                     </div>
-                                    <h3 style="margin-left:5%">@drinks.Name</h3>
+                                    <h3 style="margin-left:5%">@drinks.name</h3>
                                 </div>
                                 <div class="card-body">
                                     <p>@drinks.Ingredients</p>
 
-                                    <span style="color:red;float:right; font-size:x-large">₡@drinks.Price </span>
+                                    <span style="color:red;float:right; font-size:x-large">₡@drinks.price </span>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +162,19 @@
             </div>
         </div>
     </div>
-    <script src="~/Scripts/ShoppingCart.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
+<script>
+    document.addEventListener("click", function () {
+        var personalPizzas = @Html.Raw(Json.Encode(ViewBag.PersonalPizza));
+        var pizzas = @Html.Raw(Json.Encode(ViewBag.PizzasOnMenu));
+        personalPizzas = personalPizzas.concat(pizzas);
+        var burger = @Html.Raw(Json.Encode(ViewBag.BurgersOnMenu));
+        personalPizzas = personalPizzas.concat(burger);
+        var drinks = @Html.Raw(Json.Encode(ViewBag.DrinksOnMenu));
+        personalPizzas = personalPizzas.concat(drinks);
+        setMenu(personalPizzas);
+    });
+</script>
+<script src="~/Scripts/ShoppingCart.js"></script>

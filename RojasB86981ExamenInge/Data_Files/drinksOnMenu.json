@@ -1,29 +1,32 @@
 ﻿[
 	{
 		"Image": "drink-1.jpg",
-		"Name": "LA MAÑANA NO AMANEZCO",
-		"Tag": "drink-1",
+		"name": "LA MAÑANA NO AMANEZCO",
+		"tag": "lamañananoamanezco",
 		"Description": "",
-		"Price": "1000",
+		"price": "1000",
 		"Accompaniment": "",
-		"Ingredients": ""
+		"Ingredients": "",
+		"inCart": 0
 	},
 	{
 		"Image": "drink-2.jpg",
-		"Name": "LA LUIS BARQUERO VILLALOBOS",
-		"Tag": "drink-2",
+		"name": "LA LUIS BARQUERO VILLALOBOS",
+		"tag": "laluisbarquerovillalobos",
 		"Description": "",
-		"Price": "1200",
+		"price": "1200",
 		"Accompaniment": "",
-		"Ingredients": ""
+		"Ingredients": "",
+		"inCart": 0
 	},
 	{
 		"Image": "drink-3.jpg",
-		"Name": "LA UNA MÁS Y LLAMO A MI EX",
-		"Tag": "drink-3",
+		"name": "LA UNA MÁS Y LLAMO A MI EX",
+		"tag": "launamásyllamoamiex",
 		"Description": "",
-		"Price": "2000",
+		"price": "2000",
 		"Accompaniment": "",
-		"Ingredients": ""
+		"Ingredients": "",
+		"inCart": 0
 	}
 ]

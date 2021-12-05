@@ -74,12 +74,14 @@ namespace RojasB86981ExamenInge.Models
                 pizzaOnMenu.Add(new PizzaMenuModel
                 {
                     Image = element.Image,
-                    Name = element.Name,
+                    name = element.name,
+                    tag = element.tag,
                     Description = element.Description,
-                    Price = element.Price,
+                    price = element.price,
                     Accompaniment = element.Accompaniment,
-                    Ingredients = element.Ingredients
-                    
+                    Ingredients = element.Ingredients,
+                    inCart = element.inCart,
+
                 });
             }
             return pizzaOnMenu;

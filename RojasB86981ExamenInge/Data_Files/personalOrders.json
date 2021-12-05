@@ -1,3 +1,26 @@
 [
-  
+  {
+    "name": "Mauricio pizza",
+    "tag": "mauriciopizza",
+    "Size": "Personal",
+    "Sauce": "Salsa de tomate",
+    "Ingredients": "Tomate,Cebolla,Pollo a la parrilla",
+    "Mass": "Integral",
+    "Extras": "Aguacate",
+    "Note": null,
+    "price": 5950,
+    "inCart": 0
+  },
+  {
+    "name": "Julio Jaramillo",
+    "tag": "juliojaramillo",
+    "Size": "Personal",
+    "Sauce": "Salsa de tomate",
+    "Ingredients": "Pollo a la parrilla,Queso parmesano,Carne de vacuno",
+    "Mass": null,
+    "Extras": null,
+    "Note": null,
+    "price": 3000,
+    "inCart": 0
+  }
 ]

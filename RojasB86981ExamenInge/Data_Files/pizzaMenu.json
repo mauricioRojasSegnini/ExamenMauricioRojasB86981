@@ -1,57 +1,63 @@
 ﻿[
   {
     "Image": "margarita.jpg",
-    "Name": "Margarita",
-    "Tag": "margarita",
+    "name": "Margarita",
+    "tag": "margarita",
     "Description": "Es la pizza más antigua, con salsa de tomate, orégano, ajo, aceite de oliva, albahaca y una pizca de sal. Su principal característica es que no tiene queso.",
-    "Price": "15000",
+    "price": "15000",
     "Accompaniment ": "",
-    "Ingredients": "salsa de tomate, hongos, queso badilla"
+    "Ingredients": "salsa de tomate, hongos, queso badilla",
+    "inCart": 0
   },
   {
     "Image": "napolitana.jpg",
-    "Name": "Napolitana",
-    "Tag": "napolitana",
+    "name": "Napolitana",
+    "tag": "napolitana",
     "Description": "La FETUCHINI recuerda la bandera italiana: verde por las hojas de albahaca, blanco por el queso mozzarella y rojo por los tomates",
-    "Price": "20000",
+    "price": "20000",
     "Accompaniment ": "",
-    "Ingredients": "salsa de tomate, hojas de albahaca, queso ricotta"
+    "Ingredients": "salsa de tomate, hojas de albahaca, queso ricotta",
+    "inCart": 0
   },
   {
     "Image": "carbonara.jpg",
-    "Name": "Carbonara",
-    "Tag": "carbonara",
+    "name": "Carbonara",
+    "tag": "carbonara",
     "Description": "Leccarsi le dita deliziosa",
-    "Price": "25000",
+    "price": "25000",
     "Accompaniment ": "",
-    "Ingredients": "salsa de tomate, cebolla, queso mozzarella"
+    "Ingredients": "salsa de tomate, cebolla, queso mozzarella",
+    "inCart": 0
   },
   {
     "Image": "diávola.jpg",
-    "Name": "Diávola",
-    "Tag": "diávola",
+    "name": "Diávola",
+    "tag": "diávola",
     "Description": "Simplemente deliziosa",
-    "Price": "23000",
+    "price": "23000",
     "Accompaniment ": "",
-    "Ingredients": "salsa de tomate, chile, queso mozzarella"
+    "Ingredients": "salsa de tomate, chile, queso mozzarella",
+    "inCart": 0
   },
   {
     "Image": "lesegnine.jpg",
-    "Name": "Le Segnine",
-    "Tag": "lesegnine",
+    "name": "Le Segnine",
+    "tag": "lesegnine",
     "Description": "Simplemente mamamadítzima",
-    "Price": "23000",
+    "price": "23000",
     "Accompaniment ": "",
-    "Ingredients": "salsa de tomate, una vara verde, queso mozzarella"
+    "Ingredients": "salsa de tomate, una vara verde, queso mozzarella",
+    "inCart": 0
   },
   {
     "Image": "lamaurizien.jpg",
-    "Name": "La Maurizien",
-    "Tag": "maurizien",
+    "name": "La Maurizien",
+    "tag": "maurizien",
     "Description": "Multo bella",
-    "Price": "21000",
+    "price": "21000",
     "Accompaniment ": "",
-    "Ingredients": "salsa de tomate, tomate, queso mozzarella"
+    "Ingredients": "salsa de tomate, tomate, queso mozzarella",
+    "inCart": 0
   }
 
 ]
