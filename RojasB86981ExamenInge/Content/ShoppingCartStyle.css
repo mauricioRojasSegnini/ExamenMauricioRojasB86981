@@ -64,7 +64,7 @@
 
 
 .container-products {
-  max-width: 650px;
+  max-width: 100%;
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 50px;
@@ -80,7 +80,7 @@
 
 .product-header {
   width: 100%;
-  max-width: 650px;
+  max-width: 100%;
   display: flex;
   justify-content: flex-start;
   border-bottom: 4px solid lightgray;
