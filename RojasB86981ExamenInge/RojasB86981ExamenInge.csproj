@@ -148,6 +148,7 @@
     <Content Include="Views\ShoppingCart\Cart.cshtml" />
     <Content Include="Views\Pizza\NewPizza.cshtml" />
     <Content Include="Views\ShoppingCart\Shipping.cshtml" />
+    <Content Include="Views\ShoppingCart\PayMethod.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />

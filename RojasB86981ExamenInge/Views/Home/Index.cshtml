@@ -75,12 +75,11 @@
                                         <img src="~/images/@pizza.Image" alt="thsirt1" style="width: 360px; height: 190px;" />
                                     </div>
                                     <a class="add-cart cart1" href="#">Agregar</a>
-                                    <input type="hidden" value="15" />
                                 </div>
                                 <h3 style="margin-left:5%">@pizza.name</h3>
                             </div>
                             <div class="card-body">
-                                <p>@pizza.Ingredients</p>
+                                <p>Ingredientes: @pizza.Ingredients</p>
                                 <span style="color:red;float:right; font-size:x-large">₡@pizza.price </span>
                             </div>
                         </div>
@@ -107,13 +106,12 @@
                                         </div>
 
                                         <a class="add-cart cart1" href="#">Agregar</a>
-                                        <input type="hidden" value="15" />
                                     </div>
                                     <h3 style="margin-left:5%">@burgers.name</h3>
                                 </div>
                                 <div class="card-body">
-                                    <p>@burgers.Ingredients</p>
-
+                                    <p>Ingredientes: @burgers.Ingredients</p>
+                                    <p>Acompañado de: @burgers.Accompaniment</p>
                                     <span style="color:red;float:right; font-size:x-large">₡@burgers.price </span>
                                 </div>
                             </div>
@@ -140,15 +138,12 @@
                                         <div class="embed-responsive embed-responsive-4by3">
                                             <img src="~/images/@drinks.Image" alt="thsirt1" style="width: 360px; height: 190px" />
                                         </div>
-
                                         <a class="add-cart cart1" href="#">Agregar</a>
-                                        <input type="hidden" value="15" />
                                     </div>
                                     <h3 style="margin-left:5%">@drinks.name</h3>
                                 </div>
                                 <div class="card-body">
                                     <p>@drinks.Ingredients</p>
-
                                     <span style="color:red;float:right; font-size:x-large">₡@drinks.price </span>
                                 </div>
                             </div>
@@ -156,7 +151,6 @@
 
 
                     }
-                    <!--     width: 257px; height: 63%;-->
 
                 </div>
             </div>

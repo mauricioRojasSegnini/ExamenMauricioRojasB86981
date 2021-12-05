@@ -12,7 +12,7 @@
     <title>Su orden</title>
 </head>
 <body>
-    <div class="w-100">
+    <div class="w-100" style="margin-bottom:25%">
         <div class="container-products">
             <div class="product-header">
                 <h5 class="product-title">Productos</h5>
@@ -23,7 +23,7 @@
             <div class="products"></div>
         </div>
         <div class="text-end" style="margin-top: 15px;">
-            <input type="submit" class="btn btn-success" style="padding: 5px 55px 5px 55px;" value="Confirmar pedido" onclick="" />
+            @Html.ActionLink("Confirmar pedido", "Shipping", "ShoppingCart", new { }, new { @id = "submit", @class = "btn btn-primary mt-5 col-2 offset-9", @style = "" })
         </div>
     </div>
     <input type="hidden" id="precioTotal" value="" />

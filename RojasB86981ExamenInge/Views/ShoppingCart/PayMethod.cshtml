@@ -1,0 +1,161 @@
+﻿
+    <head>
+        <title>Pay Method</title>
+        <link rel="stylesheet" href="~/Content/ShoppingCartStyle.css" />
+    </head>
+
+<body>
+    <div class="container" style="height: 100%">
+        <div class="card-body">
+            <p class="card-text">
+                <h2>Sistema de pago</h2>
+            </p>
+            <hr />
+            <div class="row no-gutters">
+                <div class="col-6">
+                    <fieldset>
+                        <form action="/" method="post">
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i> Nombre</span>
+                                    <input id="fname" value="Mauricio Rojas" name="name" type="text" placeholder="John" class="form-control">
+                                    <p id="nameError" class="text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i> DNI</span>
+                                <div class="col-md-8">
+                                    <input id="lname" value="509826783" name="name" type="text" placeholder="Doe" class="form-control">
+                                    <p id="lastNameError" class="text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i> Correo electrónico</span>
+                                <div class="col-md-8">
+                                    <input id="email" value="maurojseg@hotmail.com" name="email" type="text" placeholder="John.Doe@gmail.com" class="form-control">
+                                    <p id="emailError" class="text-danger"></p>
+                                </div>
+                            </div>
+                        </form>
+
+                    </fieldset>
+                </div>
+                <div class="col-6">                                  
+                    <div class="card rounded-3 bg-light">
+                        <div class="card-body">
+                            <form action="#" class="credit-card-div">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <span class="help-block text-muted small-font"> Número de tarjeta</span>
+                                                <input id="creditCardNumber" value="" type="number" class="form-control" placeholder="0000 0000 0000 0000" data-maxlength="16" oninput="this.value=this.value.slice(0,this.dataset.maxlength)" required autocomplete="off" />
+                                                <p id="cardNumberError" class="text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <span class="help-block text-muted small-font"> Mes</span>
+                                                <input id="monthInput" value="" type="number" class="form-control" placeholder="MM" maxlength="2" onchange="monthLimiter(this);" required />
+                                                <p id="monthError" class="text-danger"></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <span class="help-block text-muted small-font">Año</span>
+                                                <input id="yearInput" type="number" class="form-control" placeholder="YY" min="21" maxlength="2" onchange="yearLimiter(this)" required />
+                                                <p id="yearError" class="text-danger"></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <span class="help-block text-muted small-font"> CVC</span>
+                                                <input id="cvcInput" type="text" class="form-control" placeholder="CVC" maxlength="3" required />
+                                                <p id="cvcError" class="text-danger"></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3"> 
+                                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                                <i class="fa fa-cc-discover" style="color:orange;"></i>       
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 pad-adjust">
+                                                <span class="help-block text-muted small-font"> Nombre de la tarjeta</span>
+                                                <select class="form-select" aria-label="Default select example" style="color:gray" required>
+                                                    <option selected>-Seleccionar-</option>
+                                                    <option value="Visa">Visa</option>
+                                                    <option value="Mastercard">Mastercard</option>
+                                                    <option value="American Express">American Express</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 pad-adjust">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="text-muted" required />
+                                                        He leído y acepto las politicas de privacidad
+                                                        <a data-toggle="modal" data-target="#exampleModalLong" style="color:#18bc9c">
+                                                            Ver politicas de privacidad
+                                                        </a>
+                                                    </label>
+                                                    <p class="errorPrivacy"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align:right; margin-top: 5px;">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust w-100">
+                                        @Html.ActionLink("Pagar", "index", "Home", new {}, new { @id = "submit", @class = "btn btn-primary btn-block", @style = "display: none;" })
+                                        <input type="button" class="btn btn-primary btn-block" value="Pagar" onclick="checkData()" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function checkData() {
+        let valid = true;
+        let userName = document.getElementById("fname").value;
+        let userLastName = document.getElementById("lname").value;
+        let userMailName = document.getElementById("email").value;
+        let cardNumber = document.getElementById("creditCardNumber").value;
+        let month = document.getElementById("monthInput").value;
+        let year = document.getElementById("yearInput").value;
+        let cvc = document.getElementById("cvcInput").value;
+        valid = checkValidInput(userName, "#nameEror", "Por favor ingrese un nombre");
+        valid = checkValidInput(userLastName, "#lastNameError", "Ingrese un DNI");
+        valid = checkValidInput(userMailName, "#emailError", "Ingrese un correo");
+        valid = checkValidInput(cardNumber, "#cardNumberError", "Ingrese un número de tarjeta");
+        valid = checkValidInput(month, "#monthError", "Ingrese un mes válido");
+        valid = checkValidInput(year, "#yearError", "Ingrese un año");
+        valid = checkValidInput(cvc, "#cvcError", "Ingrese el cvc ");
+        if (valid) {
+            document.getElementById("submit").click();
+        }
+    }
+    function checkValidInput(containerValue, errorContainerId, errorMsg) {
+        let valid = true;
+        if (containerValue == '') {
+            document.querySelector(errorContainerId).innerHTML = errorMsg;
+            valid = false;
+        }
+        return valid;
+    }
+    function monthLimiter(input) {
+        if (input.value < 1) input.value = '';
+        if (input.value > 12) input.value = '';
+    }
+    function yearLimiter(input) {
+        if (input.value < 21) input.value = '';
+    }
+</script>
