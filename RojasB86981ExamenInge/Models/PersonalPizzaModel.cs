@@ -4,8 +4,11 @@ namespace RojasB86981ExamenInge.Models
 {
     public class PersonalPizzaModel
     {
+        
         [Display(Name = "Nombre de la pizza")]
-        public string Title { get; set; }
+        public string name { get; set; }
+        public string tag { get; set; }
+
         [Display(Name = "Tamaño de la pizza")]
         public string Size { get; set; }
 
@@ -24,6 +27,7 @@ namespace RojasB86981ExamenInge.Models
         [Display(Name = "Nota")]
         public string Note { get; set; }
         [Display(Name = "Costo total")]
-        public int Price { get; set; }
+        public int price { get; set; }
+        public int inCart { get; set; }
     }
 }

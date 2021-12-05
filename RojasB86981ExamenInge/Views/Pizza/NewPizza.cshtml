@@ -25,9 +25,9 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
-                                    @Html.LabelFor(model => model.Title)
-                                    @Html.TextBoxFor(model => model.Title, new { @class = "form-control", @placeholder = "-Ingrese un nombre-" })
-                                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                    @Html.LabelFor(model => model.name)
+                                    @Html.TextBoxFor(model => model.name, new { @class = "form-control", @placeholder = "-Ingrese un nombre-" })
+                                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
                                 </div>
 
                                 <div class="col">
@@ -104,7 +104,7 @@
                             </div>
                             <div class="row"style="text-align:right" >
                                 <div class="col align-self-end">
-                                    @Html.LabelFor(model => model.Price)
+                                    @Html.LabelFor(model => model.price)
                                     <input type="hidden" id="Price" name="Price" value="">
                                     <h3 id="price" style="color:red"></h3>
                                 </div>

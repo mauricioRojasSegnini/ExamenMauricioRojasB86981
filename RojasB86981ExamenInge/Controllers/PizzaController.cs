@@ -20,6 +20,8 @@ namespace RojasB86981ExamenInge.Controllers
             ActionResult view = RedirectToAction("NewPizza", "Pizza");
             personalPizzaOrder.Ingredients = Request.Form["Ingredients"];
             personalPizzaOrder.Extras = Request.Form["Extras"];
+            personalPizzaOrder.tag = personalPizzaOrder.name;
+            personalPizzaOrder.inCart = 0;
             ViewBag.SuccessOnCreation = false;
             try
             {

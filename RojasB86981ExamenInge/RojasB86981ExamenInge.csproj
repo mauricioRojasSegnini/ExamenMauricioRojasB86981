@@ -139,6 +139,7 @@
     <Content Include="images\margarita.jpg" />
     <Content Include="images\mauSombrero.png" />
     <Content Include="images\napolitana.jpg" />
+    <Content Include="images\Tupizza.png" />
     <Content Include="Scripts\ShoppingCart.js" />
     <Content Include="Views\Home\Location.cshtml" />
     <Content Include="Views\Home\OurHistory.cshtml" />

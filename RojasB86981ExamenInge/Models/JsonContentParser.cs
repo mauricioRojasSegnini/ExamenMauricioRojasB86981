@@ -79,7 +79,6 @@ namespace RojasB86981ExamenInge.Models
                     Price = element.Price,
                     Accompaniment = element.Accompaniment,
                     Ingredients = element.Ingredients
-
                     
                 });
             }
@@ -93,13 +92,16 @@ namespace RojasB86981ExamenInge.Models
             {
                 pizza.Add(new PersonalPizzaModel
                 {
-                    Title = element.Title,
+                    name = element.name,
+                    tag = element.tag,
                     Size = element.Size,
                     Sauce = element.Sauce,
                     Mass = element.Mass,
                     Extras = element.Extras,
                     Ingredients = element.Ingredients,
-                    Note = element.Note
+                    Note = element.Note,
+                    inCart = element.inCart,
+                    price = element.price
 
 
                 });

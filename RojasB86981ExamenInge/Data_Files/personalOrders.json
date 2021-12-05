@@ -1,22 +1,3 @@
 [
-  {
-    "Title": null,
-    "Size": null,
-    "Sauce": null,
-    "Ingredients": null,
-    "Mass": null,
-    "Extras": "Piña,Aguacate,Caviar",
-    "Note": null,
-    "Price": 0
-  },
-  {
-    "Title": "maurioc",
-    "Size": "Mediana",
-    "Sauce": null,
-    "Ingredients": null,
-    "Mass": null,
-    "Extras": null,
-    "Note": null,
-    "Price": 2000
-  }
+  
 ]

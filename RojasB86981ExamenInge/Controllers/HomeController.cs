@@ -18,6 +18,10 @@ namespace RojasB86981ExamenInge.Controllers
             List<PizzaMenuModel> pizzaMenu = Json_ContentParser.GetContentsFromJson<PizzaMenuModel>("pizzaMenu.json", Json_ContentParser.GetProductsOnMenuFromJson);
             List<PizzaMenuModel> burgerMenu = Json_ContentParser.GetContentsFromJson<PizzaMenuModel>("burgersOnMenu.json", Json_ContentParser.GetProductsOnMenuFromJson);
             List<PizzaMenuModel> drinks = Json_ContentParser.GetContentsFromJson<PizzaMenuModel>("drinksOnMenu.json", Json_ContentParser.GetProductsOnMenuFromJson);
+
+            List<PersonalPizzaModel> personalPizza = Json_ContentParser.GetContentsFromJson<PersonalPizzaModel>("personalOrders.json", Json_ContentParser.GetPersonalPizzaFromJson);
+
+            ViewBag.PersonalPizza = personalPizza;
             ViewBag.PizzasOnMenu = pizzaMenu;
             ViewBag.BurgersOnMenu = burgerMenu;
             ViewBag.DrinksOnMenu = drinks;

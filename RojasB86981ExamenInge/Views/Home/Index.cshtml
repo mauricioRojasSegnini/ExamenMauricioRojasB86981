@@ -17,6 +17,42 @@
 <body>
     
     <div class="card" style="margin-top: 25px;">
+        @if(ViewBag.PersonalPizza.Count != 0)
+        {
+            <h3 class="card-header">
+                <a href="#" class="display-6 text-primary">Tus pizzas personales</a>
+            </h3>
+            <div class="card-body">
+                <div class="row">
+                    <!---->
+                    @foreach (var personalPizza in ViewBag.PersonalPizza)
+                    {
+                        <div class="col-sm" style="margin-bottom:20px">
+                            <div class="card h-100 bg-light">
+                                <div class="ProductsContainer">
+                                    <div class="image">
+                                        <div class="embed-responsive embed-responsive-4by3">
+                                            <img src="~/images/Tupizza.png" alt="thsirt1" style="width: 100%; height: 190px;" />
+                                        </div>
+                                        <a class="add-cart cart1" href="#">Agregar</a>
+                                        <input type="hidden" value="15" />
+                                    </div>
+                                    <h3 style="margin-top:5%">@personalPizza.name</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>@personalPizza.Ingredients</p>
+                                    <p>@personalPizza.Extras</p>
+                                    <p>@personalPizza.Mass</p>
+                                    <span style="color:red;float:right; font-size:x-large">₡@personalPizza.price </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!--     width: 257px; height: 63%;-->
+                </div>
+            </div>
+
+        }
         <h3 class="card-header">
             <a href="#" class="display-6 text-primary">Pizza</a>
         </h3>
@@ -37,8 +73,8 @@
                                 </div>
                                 <h3 style="margin-left:5%">@pizza.Name</h3>
                             </div>
-                            <div class="card-body"> 
-                                <p >@pizza.Ingredients</p>
+                            <div class="card-body">
+                                <p>@pizza.Ingredients</p>
                                 <span style="color:red;float:right; font-size:x-large">₡@pizza.Price </span>
                             </div>
                         </div>
