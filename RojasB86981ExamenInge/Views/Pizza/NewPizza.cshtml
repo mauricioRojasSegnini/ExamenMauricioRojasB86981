@@ -1,0 +1,226 @@
+﻿@model RojasB86981ExamenInge.Models.PersonalPizzaModel
+@{
+    ViewBag.Title = "Nueva pizza";
+}
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div class="container">
+        @using (Html.BeginForm("SubmitPizza", "Pizza", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form"style="margin-top: 15px;">
+                <div class="form">
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-success text-center">CREAR TU PROPIA PIZZA</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    @Html.LabelFor(model => model.Title)
+                                    @Html.TextBoxFor(model => model.Title, new { @class = "form-control", @placeholder = "-Ingrese un nombre-" })
+                                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col">
+                                    <div>
+                                        @Html.LabelFor(model => model.Size)
+                                        <select name="Size" id="Size" class="form-select">
+                                            <option value="">Seleccione el tamaño</option>
+                                            <option value="Personal">Personal</option>
+                                            <option value="Mediana">Mediana</option>
+                                            <option value="Familiar">Familiar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        @Html.LabelFor(model => model.Sauce)
+                                        <select name="Sauce" id="Sauce" class="form-select">
+                                            <option value="">Seleccione la salsa</option>
+                                            <option value="Salsa de tomate">Salsa de tomate</option>
+                                            <option value="Salsa blanca">Salsa blanca</option>
+                                            <option value="Salsa barbacoa">Salsa barbacoa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 15px;">
+
+                                <div class="col">
+                                    <div>
+                                        @Html.LabelFor(model => model.Mass)
+                                        <select name="Mass" id="Mass" class="form-select">
+                                            <option value="">Seleccione la masa</option>
+                                            <option value="Integral">Integral</option>
+                                            <option value="Fina">Fina</option>
+                                            <option value="Gruesa">Gruesa</option>
+                                            <option value="Estilo Chicago">Estilo Chicago</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    @Html.LabelFor(model => model.Ingredients)
+                                    <p style="float:right; color:lightslategray"></p>
+                                    <br />
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected"  value="Tomate">
+                                    <label for="Ingredients"> Tomate</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Cebolla">
+                                    <label for="Ingredients"> Cebolla</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected"  value="Pollo a la parrilla">
+                                    <label for="Ingredients"> Pollo a la parrilla</label><br><br>
+                                </div>
+                                <div class="col">
+                                    <br />
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Queso parmesano">
+                                    <label for="vehicle1"> Queso parmesano</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Carne de vacuno">
+                                    <label for="vehicle2"> Carne de vacuno</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Pepperoni">
+                                    <label for="vehicle3"> Pepperoni</label><br><br>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row" style="margin-top: 15px;">
+                                <h2>@Html.LabelFor(model => model.Extras)</h2>
+                                <p style="float:right; color:lightslategray">Con costos adicionales</p>
+                                <div class="col" style="margin-left: 15px;">    
+                                    <input type="checkbox" id="Aguacate" name="Extras" class="AguacateSelected" value="Aguacate">
+                                    <label for="Extras"> Aguacate</label><br>
+                                    <input type="checkbox" id="Piña" name="Extras" class="PiñaSelected" value="Piña">
+                                    <label for="Extras"> Piña</label><br>
+                                    <input type="checkbox" id="Caviar" name="Extras" class="CaviarSelected"  value="Caviar">
+                                    <label for="Extras"> Caviar</label><br><br>
+                                </div>
+                            </div>
+                            <div class="row"style="text-align:right" >
+                                <div class="col align-self-end">
+                                    @Html.LabelFor(model => model.Price)
+                                    <input type="hidden" id="Price" name="Price" value="">
+                                    <h3 id="price" style="color:red"></h3>
+                                </div>
+                            </div>
+                            
+                            <div class="text-end" style="margin-top: 15px;">
+                                <input type="submit" class="btn btn-success" style="padding: 5px 55px 5px 55px;" value="Agregar pizza" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+</html>
+<script>
+
+    document.addEventListener("click", function () {
+        let price = 0;
+        price += addSizePrice();
+        price += addSaucePrice();
+        price += addMassPrice();
+        price += addIngredientsPrice();
+        price += addExtrasPrice(price);
+        if (price == 0) {
+            document.getElementById("price").innerHTML = '';
+        } else {
+            document.getElementById("price").innerHTML = price + ".00 colones";
+        }
+        document.getElementById("Price").value = price;
+    });
+
+    function addSizePrice() {
+        let Size = document.getElementById("Size").value;
+        let sizePrice = 0;
+        if (Size != "") {
+            if (Size == 'Personal') {
+                sizePrice = 1000;
+            }
+            if (Size == 'Mediana') {
+                sizePrice = 2000;
+            }
+            if (Size == 'Familiar') {
+                sizePrice = 3000;
+            }
+        } else {
+            sizePrice = 0;
+        }
+        return sizePrice;
+    }
+
+    function addSaucePrice() {
+        let Sauce = document.getElementById("Sauce").value;
+        if (Sauce != "") {
+            return 1000;
+        } else {
+            return 0;
+        }
+    }
+
+    function addMassPrice() {
+        let mass = document.getElementById("Mass").value;
+        let massPrice = 0;
+        if (mass != "") {
+            if (mass == 'Integral') {
+                massPrice = 2000;
+            }
+            if (mass == 'Fina') {
+                massPrice = 2000;
+            }
+            if (mass == 'Gruesa') {
+                massPrice = 3000;
+            }
+            if (mass == 'Estilo Chicago') {
+                massPrice = 3500;
+            }
+        } else {
+            massPrice = 0;
+        }
+        return massPrice;
+    }
+
+    function addIngredientsPrice() {
+        var IngredientsCheckted = document.querySelector('.IngredientsSelected:checked');
+        if (IngredientsCheckted != null) {
+            return 1000;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    function addExtrasPrice(price) {
+        var ExtrasPiña = ((document.querySelector('.PiñaSelected:checked') == null) ? '' : 'Piña');
+        var ExtrasAvocado = ((document.querySelector('.AguacateSelected:checked') == null) ? '' : 'Aguacate');
+        var ExtrasCaviar = ((document.querySelector('.CaviarSelected:checked') == null) ? '' : 'Caviar');
+        let ExtrasPrice = 0;
+        console.log(ExtrasPiña)
+        console.log(ExtrasAvocado)
+        console.log(ExtrasCaviar)
+        if (ExtrasPiña == 'Piña') {
+            ExtrasPrice += 250;
+        }
+        if (ExtrasAvocado == 'Aguacate') {
+            ExtrasPrice += 950;
+        }
+        if (ExtrasCaviar == 'Caviar') {
+            ExtrasPrice += 1000;
+        }
+        console.log(ExtrasPrice)
+        return ExtrasPrice;
+    }
+
+</script>

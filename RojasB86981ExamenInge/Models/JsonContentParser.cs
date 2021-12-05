@@ -86,6 +86,27 @@ namespace RojasB86981ExamenInge.Models
             return pizzaOnMenu;
         }
 
+        public List<PersonalPizzaModel> GetPersonalPizzaFromJson(dynamic jsonCollection)
+        {
+            List<PersonalPizzaModel> pizza = new List<PersonalPizzaModel>();
+            foreach (var element in jsonCollection)
+            {
+                pizza.Add(new PersonalPizzaModel
+                {
+                    Title = element.Title,
+                    Size = element.Size,
+                    Sauce = element.Sauce,
+                    Mass = element.Mass,
+                    Extras = element.Extras,
+                    Ingredients = element.Ingredients,
+                    Note = element.Note
+
+
+                });
+            }
+            return pizza;
+        }
+
         public List<Model> GetContentsFromJson<Model>(string jsonFile, Func<dynamic, List<Model>> GetModelsFromJson)
         {
             List<Model> models = new List<Model>();

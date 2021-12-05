@@ -25,7 +25,7 @@
                 <!---->
                 @foreach (var pizza in ViewBag.PizzasOnMenu)
                 {
-                    <div class="col-sm">
+                    <div class="col-sm" style="margin-bottom:20px">
                         <div class="card h-100 bg-light">
                             <div class="ProductsContainer">
                                 <div class="image">
@@ -37,10 +37,8 @@
                                 </div>
                                 <h3 style="margin-left:5%">@pizza.Name</h3>
                             </div>
-                            <div class="card-body">
-                                
+                            <div class="card-body"> 
                                 <p >@pizza.Ingredients</p>
-
                                 <span style="color:red;float:right; font-size:x-large">₡@pizza.Price </span>
                             </div>
                         </div>
@@ -51,14 +49,14 @@
         </div>
         <div style="margin-top:5%">
             <h3 class="card-header">
-                <a href="#" class="display-6 text-primary">Bebidas</a>
+                <a href="#" class="display-6 text-primary">Hamburguesas</a>
             </h3>
             <div class="card-body">
                 <div class="row">
                     <!---->
                     @foreach (var burgers in ViewBag.BurgersOnMenu)
                     {
-                        <div class="col-sm">
+                        <div class="col-sm" style="margin-bottom:20px">
                             <div class="card h-100 bg-light">
                                 <div class="ProductsContainer">
                                     <div class="image">
@@ -81,8 +79,6 @@
 
 
                     }
-                    <!--     width: 257px; height: 63%;-->
-
                 </div>
             </div>
         </div>
@@ -95,7 +91,7 @@
                     <!---->
                     @foreach (var drinks in ViewBag.DrinksOnMenu)
                     {
-                        <div class="col-sm">
+                        <div class="col-sm" style="margin-bottom:20px">
                             <div class="card h-100 bg-light">
                                 <div class="ProductsContainer">
                                     <div class="image">
