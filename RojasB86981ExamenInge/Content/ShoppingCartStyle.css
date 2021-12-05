@@ -115,7 +115,7 @@
 .product {
   width: 45%;
   display: flex;
-  justify-content: space-around;
+  
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid lightgray;
@@ -143,7 +143,7 @@
 }
 
 .basketTotalTitle {
-    width: 40%;
+    width: 15%;
     font-size: medium;
 }
 
