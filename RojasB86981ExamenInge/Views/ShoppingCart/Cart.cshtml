@@ -22,9 +22,22 @@
             </div>
             <div class="products"></div>
         </div>
+        <div class="text-end" style="margin-top: 15px;">
+            <input type="submit" class="btn btn-success" style="padding: 5px 55px 5px 55px;" value="Confirmar pedido" onclick="" />
+        </div>
     </div>
+    <input type="hidden" id="precioTotal" value="" />
 
     <script src="~/Scripts/ShoppingCart.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
+
+<script>
+    document.addEventListener("mousemove", function () {
+        
+        var totalPrice = document.getElementById("cartPrice").textContent;
+        document.getElementById("precioTotal").value = totalPrice;
+    });
+
+</script>
