@@ -11,19 +11,21 @@ namespace RojasB86981ExamenInge.Controllers
         // GET: ShoppingCart
         public ActionResult Cart()
         {
-            return View();
+            return View("Carrito de compras");
         }
 
         public ActionResult Shipping() {
-            return View();
+            return View("Formulario de entrega a domicilio");
         }
         public ActionResult PayMethod()
         {
-            return View();
+            return View("Sistema de pago");
         }
 
         public ActionResult Delivery() {
-            return View();
+            return View("Método de entrega");
         }
+
+
     }
 }
