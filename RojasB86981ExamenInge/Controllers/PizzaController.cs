@@ -11,7 +11,7 @@ namespace RojasB86981ExamenInge.Controllers
         // GET: Pizza
         public ActionResult NewPizza()
         {
-            return View("New pizza");
+            return View("");
         }
 
         [HttpPost]
