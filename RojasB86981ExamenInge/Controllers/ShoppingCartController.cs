@@ -21,5 +21,9 @@ namespace RojasB86981ExamenInge.Controllers
         {
             return View();
         }
+
+        public ActionResult Delivery() {
+            return View();
+        }
     }
 }

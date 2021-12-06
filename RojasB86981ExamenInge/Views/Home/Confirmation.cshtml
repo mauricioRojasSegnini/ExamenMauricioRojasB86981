@@ -1,0 +1,28 @@
+﻿<html lang="en">
+<head>
+    <title>Confirmación</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="text-center" style="margin-top:8%">
+        <img style=";border-radius: 50%;"
+             width="270"
+             src="~/images/segninis pizza.png"
+             alt="a photo of Mauricio" />
+    </div>
+    <div class="container">
+        <br />
+        <div class="card mb-3">
+            <h1 class="text-center border border-success " id="time"></h1>
+        </div>
+    </div>
+    <div class="button text-center">
+        <a href="/Home/Index" class="btn btn-primary btn active" role="button" aria-pressed="true">Volver al inicio</a>
+    </div>
+    <br/>
+</body>
+</html>
+<script>
+    document.getElementById("time").innerHTML ="Su pedido va a estar en: " +Math.floor(Math.random() * 60)+" minutos";
+</script>

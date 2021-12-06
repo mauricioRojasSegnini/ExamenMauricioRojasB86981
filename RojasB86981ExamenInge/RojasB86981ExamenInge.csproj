@@ -131,14 +131,18 @@
     <Compile Include="Models\PizzaMenuModel.cs" />
     <Compile Include="Models\PersonalPizzaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\homePageAccess.css" />
     <Content Include="Content\ShoppingCartStyle.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\whatsappIcon.css" />
     <Content Include="images\carbonara.jpg" />
+    <Content Include="images\Delivery.png" />
     <Content Include="images\diávola.jpg" />
+    <Content Include="images\DriveThruPickUp.png" />
     <Content Include="images\margarita.jpg" />
     <Content Include="images\mauSombrero.png" />
     <Content Include="images\napolitana.jpg" />
+    <Content Include="images\pick up.jfif" />
     <Content Include="images\Tupizza.png" />
     <Content Include="Scripts\homeDelivery.js" />
     <Content Include="Scripts\NewPizzaScript.js" />
@@ -149,6 +153,8 @@
     <Content Include="Views\Pizza\NewPizza.cshtml" />
     <Content Include="Views\ShoppingCart\Shipping.cshtml" />
     <Content Include="Views\ShoppingCart\PayMethod.cshtml" />
+    <Content Include="Views\ShoppingCart\Delivery.cshtml" />
+    <Content Include="Views\Home\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -250,6 +256,7 @@
     <Content Include="Data_Files\pizzaMenu.json" />
     <Content Include="Data_Files\drinksOnMenu.json" />
     <Content Include="Data_Files\personalOrders.json" />
+    <Content Include="images\home Delivery.webp" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
