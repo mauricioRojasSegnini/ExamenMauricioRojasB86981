@@ -1,0 +1,130 @@
+﻿@model RojasB86981ExamenInge.Models.PersonalPizzaModel
+@{
+    ViewBag.Title = "Nueva pizza";
+}
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/ShoppingCartStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        @using (Html.BeginForm("SubmitPizza", "Pizza", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form" style="margin-top: 15px;">
+                <div class="form">
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-success text-center">CREAR TU PROPIA PIZZA</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    @Html.LabelFor(model => model.name)
+                                    @Html.TextBoxFor(model => model.name, new { @class = "form-control", @placeholder = "-Ingrese un nombre-" })
+                                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col">
+                                    <div>
+                                        @Html.LabelFor(model => model.Size)
+                                        <select name="Size" id="Size" class="form-select">
+                                            <option value="">Seleccione el tamaño</option>
+                                            <option value="Personal">Personal</option>
+                                            <option value="Mediana">Mediana</option>
+                                            <option value="Familiar">Familiar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        @Html.LabelFor(model => model.Sauce)
+                                        <select name="Sauce" id="Sauce" class="form-select">
+                                            <option value="">Seleccione la salsa</option>
+                                            <option value="Salsa de tomate">Salsa de tomate</option>
+                                            <option value="Salsa blanca">Salsa blanca</option>
+                                            <option value="Salsa barbacoa">Salsa barbacoa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 15px;">
+
+                                <div class="col">
+                                    <div>
+                                        @Html.LabelFor(model => model.Mass)
+                                        <select name="Mass" id="Mass" class="form-select">
+                                            <option value="">Seleccione la masa</option>
+                                            <option value="Integral">Integral</option>
+                                            <option value="Fina">Fina</option>
+                                            <option value="Gruesa">Gruesa</option>
+                                            <option value="Estilo Chicago">Estilo Chicago</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    @Html.LabelFor(model => model.Ingredients)
+                                    <p style="float:right; color:lightslategray"></p>
+                                    <br />
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Tomate">
+                                    <label for="Ingredients"> Tomate</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Cebolla">
+                                    <label for="Ingredients"> Cebolla</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Pollo a la parrilla">
+                                    <label for="Ingredients"> Pollo a la parrilla</label><br><br>
+                                </div>
+                                <div class="col">
+                                    <br />
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Queso parmesano">
+                                    <label for="vehicle1"> Queso parmesano</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Carne de vacuno">
+                                    <label for="vehicle2"> Carne de vacuno</label><br>
+                                    <input type="checkbox" id="Ingredients" name="Ingredients" class="IngredientsSelected" value="Pepperoni">
+                                    <label for="vehicle3"> Pepperoni</label><br><br>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row" style="margin-top: 15px;">
+                                <h2>@Html.LabelFor(model => model.Extras)</h2>
+                                <p style="float:right; color:lightslategray">Con costos adicionales</p>
+                                <div class="col" style="margin-left: 15px;">
+                                    <input type="checkbox" id="Aguacate" name="Extras" class="AguacateSelected" value="Aguacate">
+                                    <label for="Extras"> Aguacate</label><br>
+                                    <input type="checkbox" id="Piña" name="Extras" class="PiñaSelected" value="Piña">
+                                    <label for="Extras"> Piña</label><br>
+                                    <input type="checkbox" id="Caviar" name="Extras" class="CaviarSelected" value="Caviar">
+                                    <label for="Extras"> Caviar</label><br><br>
+                                </div>
+                            </div>
+                            <div class="row" style="text-align:right">
+                                <div class="col align-self-end">
+                                    @Html.LabelFor(model => model.price)
+                                    <input type="hidden" id="Price" name="Price" value="">
+                                    <h3 id="price" style="color:red"></h3>
+                                </div>
+                            </div>
+
+                            <div class="text-end" style="margin-top: 15px;">
+                                <input type="submit" class="btn btn-primary" style="padding: 5px 55px 5px 55px;" value="Agregar pizza" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <script src="~/Scripts/NewPizzaScript.js"></script>
+</body>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+</html>
+

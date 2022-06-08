@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Required meta tags -->
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Contácteme</title>
-    <script src="https://kit.fontawesome.com/33782c52ea.js"
-            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/33782c52ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/Content/contactoStyle.css" />
-    
+    <link rel="stylesheet" href="~/Content/whatsappIcon.css" />
+    <link rel="stylesheet" href="~/Content/ShoppingCartStyle.css" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+          rel="stylesheet" />
 </head>
 <body>
     <div class="ContactBody">
         <section class="contacto">
-            <img class="perfil"
-                 width="180"
-                 src="~/images/segninis pizza.png"
-                 alt="a photo of Mauricio" />
+            <p>
+                <a href="/Home/Index" style="color:white;text-decoration: auto; font-size:large"><i class="fas fa-angle-left"></i></a>
+            </p>
+            <img class="perfil" width="180" src="~/images/segninis pizza.png" alt="a photo of Mauricio" />
             <div class="ContactText">
-
                 <h1>Segnini's Pizza</h1>
                 <h2>El mejor ristorante de totte Italie</h2>
                 <h2 style="font-size:smaller">Pueden contactárnos en nuestras redes sociales y con gusto los atenderémos</h2>
                 <h2>Tel: <strong>83536038</strong></h2>
-                
             </div>
             <ul>
                 <li>
@@ -46,10 +44,13 @@
                     </a>
                 </li>
             </ul>
-            <p >
-                <a href="~/Views/Home/Index.cshtml" style="color:white">Inicio </a>
-            </p>
         </section>
+        <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=50683536048" target="_blank" title="Contáctame por Whatsapp">
+                <img src="https://www.peengler.com/wp-content/uploads/whatsapp.png" alt="WhatsApp" />
+            </a>
+        </div>
     </div>
 </body>
 </html>
+<script src="~/Scripts/ShoppingCart.js"></script>

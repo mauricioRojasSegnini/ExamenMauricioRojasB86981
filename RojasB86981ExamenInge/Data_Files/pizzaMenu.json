@@ -1,0 +1,63 @@
+﻿[
+  {
+    "Image": "margarita.jpg",
+    "name": "Margarita",
+    "tag": "margarita",
+    "Description": "Es la pizza más antigua, con salsa de tomate, orégano, ajo, aceite de oliva, albahaca y una pizca de sal. Su principal característica es que no tiene queso.",
+    "price": "15000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, hongos, queso badilla",
+    "inCart": 0
+  },
+  {
+    "Image": "napolitana.jpg",
+    "name": "Napolitana",
+    "tag": "napolitana",
+    "Description": "La FETUCHINI recuerda la bandera italiana: verde por las hojas de albahaca, blanco por el queso mozzarella y rojo por los tomates",
+    "price": "20000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, hojas de albahaca, queso ricotta",
+    "inCart": 0
+  },
+  {
+    "Image": "carbonara.jpg",
+    "name": "Carbonara",
+    "tag": "carbonara",
+    "Description": "Leccarsi le dita deliziosa",
+    "price": "25000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, cebolla, queso mozzarella",
+    "inCart": 0
+  },
+  {
+    "Image": "diávola.jpg",
+    "name": "Diávola",
+    "tag": "diávola",
+    "Description": "Simplemente deliziosa",
+    "price": "23000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, chile, queso mozzarella",
+    "inCart": 0
+  },
+  {
+    "Image": "lesegnine.jpg",
+    "name": "Le Segnine",
+    "tag": "lesegnine",
+    "Description": "Simplemente mamamadítzima",
+    "price": "23000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, una vara verde, queso mozzarella",
+    "inCart": 0
+  },
+  {
+    "Image": "lamaurizien.jpg",
+    "name": "La Maurizien",
+    "tag": "lamaurizien",
+    "Description": "Multo bella",
+    "price": "21000",
+    "Accompaniment ": "",
+    "Ingredients": "salsa de tomate, tomate, queso mozzarella",
+    "inCart": 0
+  }
+
+]

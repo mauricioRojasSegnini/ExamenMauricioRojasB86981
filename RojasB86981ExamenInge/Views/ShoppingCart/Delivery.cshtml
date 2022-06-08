@@ -1,0 +1,45 @@
+﻿
+<head>
+    <link rel="stylesheet" href="~/Content/homePageAccess.css">
+</head>
+
+<body>
+    <div class="container vh-100">
+        <div class="">
+            <br />
+            <h3 class="card-header">
+                Seleccione la forma de entrega de tu pedido
+            </h3>
+            <br />
+            <div class="row offset-2" style="text-align:center">
+                <div class="col-4" style="margin-right:5%">
+                    <div class="imageHomePage">
+                        <h3 class="card-header">A domicilio</h3>
+                        <img src="~/images/Delivery.png" class="img_squareImg" alt="Responsive image">
+                        <div class="image__overlay image__overlay--light">
+                            <div class="image__title">@Html.ActionLink("Entrega a domicilio", "../ShoppingCart/Shipping")</div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="imageHomePage">
+                        <h3 class="card-header">Pick up</h3>
+                        <img src="~/images/DriveThruPickUp.png" class="img_squareImg" alt="Responsive image">
+                        <div class="image__overlay image__overlay--light">
+                            <div class="image__title">@Html.ActionLink("Pick up", "../Home/Confirmation")</div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        <hr />
+
+    </div>
+
+
+</body>

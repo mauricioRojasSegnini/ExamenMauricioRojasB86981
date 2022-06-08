@@ -23,7 +23,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarColor03">
+            <div class="collapse navbar-collapse" id="navbarColor03" style="margin-left:2%; font-size:medium">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="/Home/Index">
@@ -32,14 +32,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Crea tu pizza</a>
+                        <a class="nav-link" href="/Pizza/NewPizza">Crea tu pizza</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nosotros</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Estamos aquí</a>
-                            <a class="dropdown-item" href="#">Nuestra historia</a>
+                            <a class="dropdown-item" href="/Home/Location">Estamos aquí</a>
+                            <a class="dropdown-item" href="/Home/OurHistory">Nuestra historia</a>
                             <a class="dropdown-item" href="#">Nuestros empleados</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Separated link</a>
@@ -51,89 +51,97 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Home/About">Evalúanos</a>
                     </li>
+                    <li class="cart">
+                        <a href="../ShoppingCart/Cart">
+                            <ion-icon name="cart"></ion-icon>Tu pedido <span>0</span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
+
     </nav>
 
     <div class="container body-content">
         @RenderBody()
     </div>
-        <hr />
-        <footer>
-            <div class="card-footer bg-primary"  style="padding:20px; margin-top: 45px; color:white;width: 100%;" >
-                <div class="d-flex align-items-center" href="/">
-                    
-                    <h2 class="d-inline-block" style="color:white">
-                        Segnini's Pizza <br />  
-                    </h2>
-                </div>
+    <hr />
+    <footer>
+        <div class="card-footer bg-primary" style="padding:20px; margin-top: 45px; color:white;width: 100%;">
+            <div class="d-flex align-items-center" href="/">
 
-                <div class="row">
-                    <div class="col-2">
-                        <div class="card-body">
-                            <p class="card-title">
-                                <i class="fas fa-phone"></i>
-                                <strong> Teléfono</strong> <br />
-                            </p>
-                            <p class="card-text">
-                                8793-0495 <br />
-                                2233-9485 <br />
-                                8493-3022 <br />
-                            </p>
-                            <p class="card-title" style="margin-top: 30px;">
-                                <i class="fas fa-envelope"></i>
-                                <strong> Correo</strong> <br />
-                            </p>
-                            <p class="card-text" >
-                                <a href="mailto:actividades.planetarioucr@gmail.com" style="color:white">Segnini'sPizza@gmail.com</a>
-                                <br />
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-5">
-                        <div class="card-body">
-                            <p class="card-title">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <strong> Dirección</strong> <br />
-                            </p>
-                            <p class="card-text">
-                                De la Coca – Cola, 200 metros Oeste  y 400 Norte, a la par de la pulpería Doña Rosita, la casa con el portón negro y el muro rojo
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="card-body">
-                            <p class="card-title">
-                                <i class="fas fa-calendar"></i>
-                                <strong> Horarios</strong> <br />
-                            </p>
-                            <p class="card-text">
-                                L - V: <br />
-                                9:00am - 8:00pm <br />
-                                S y D:  <br />
-                                9:00am - 4:00pm
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-3">
-                        <div class="card-body">
-                            <a class="nav-link" href="#">
-                                <strong style="color:white"> Compártanos en tus redes</strong> <br />
-                                <br />
-                                <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2Fplanetariodesanjose&layout=button&size=large&width=103&height=28&appId" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                <h2 class="d-inline-block" style="color:white">
+                    Segnini's Pizza <br />
+                </h2>
             </div>
-            
-        </footer>
 
+            <div class="row">
+                <div class="col-2">
+                    <div class="card-body">
+                        <p class="card-title">
+                            <i class="fas fa-phone"></i>
+                            <strong> Teléfono</strong> <br />
+                        </p>
+                        <p class="card-text">
+                            8793-0495 <br />
+                            2233-9485 <br />
+                            8493-3022 <br />
+                        </p>
+                        <p class="card-title" style="margin-top: 30px;">
+                            <i class="fas fa-envelope"></i>
+                            <strong> Correo</strong> <br />
+                        </p>
+                        <p class="card-text">
+                            <a href="mailto:actividades.planetarioucr@gmail.com" style="color:white">Segnini'sPizza@gmail.com</a>
+                            <br />
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="card-body">
+                        <p class="card-title">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong> Dirección</strong> <br />
+                        </p>
+                        <p class="card-text">
+                            De la Coca – Cola, 200 metros Oeste  y 400 Norte, a la par de la pulpería Doña Rosita, la casa con el portón negro y el muro rojo
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="card-body">
+                        <p class="card-title">
+                            <i class="fas fa-calendar"></i>
+                            <strong> Horarios</strong> <br />
+                        </p>
+                        <p class="card-text">
+                            L - V: <br />
+                            9:00am - 8:00pm <br />
+                            S y D:  <br />
+                            9:00am - 4:00pm
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card-body">
+                        <a class="nav-link" href="#">
+                            <strong style="color:white"> Compártanos en tus redes</strong> <br />
+                            <br />
+                            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2Fplanetariodesanjose&layout=button&size=large&width=103&height=28&appId" width="103" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="~/Scripts/ShoppingCart.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrapJS")
     @RenderSection("scripts", required: false)

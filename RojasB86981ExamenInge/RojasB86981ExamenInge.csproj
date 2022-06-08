@@ -121,10 +121,40 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <None Include="Data_Files\burgersOnMenu.json" />
+    <Compile Include="Controllers\PizzaController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\JsonContentParser.cs" />
+    <Compile Include="Models\PizzaMenuModel.cs" />
+    <Compile Include="Models\PersonalPizzaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\homePageAccess.css" />
+    <Content Include="Content\ShoppingCartStyle.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\whatsappIcon.css" />
+    <Content Include="images\carbonara.jpg" />
+    <Content Include="images\Delivery.png" />
+    <Content Include="images\diávola.jpg" />
+    <Content Include="images\DriveThruPickUp.png" />
+    <Content Include="images\margarita.jpg" />
+    <Content Include="images\mauSombrero.png" />
+    <Content Include="images\napolitana.jpg" />
+    <Content Include="images\pick up.jfif" />
+    <Content Include="images\Tupizza.png" />
+    <Content Include="Scripts\homeDelivery.js" />
+    <Content Include="Scripts\NewPizzaScript.js" />
+    <Content Include="Scripts\ShoppingCart.js" />
+    <Content Include="Views\Home\Location.cshtml" />
+    <Content Include="Views\Home\OurHistory.cshtml" />
+    <Content Include="Views\ShoppingCart\Cart.cshtml" />
+    <Content Include="Views\Pizza\NewPizza.cshtml" />
+    <Content Include="Views\ShoppingCart\Shipping.cshtml" />
+    <Content Include="Views\ShoppingCart\PayMethod.cshtml" />
+    <Content Include="Views\ShoppingCart\Delivery.cshtml" />
+    <Content Include="Views\Home\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -155,16 +185,16 @@
     <Content Include="images\bg_2.png" />
     <Content Include="images\bg_3.jpg" />
     <Content Include="images\bg_4.jpg" />
-    <Content Include="images\burger-1.jpg" />
-    <Content Include="images\burger-2.jpg" />
-    <Content Include="images\burger-3.jpg" />
+    <Content Include="images\lamalcriada.jpg" />
+    <Content Include="images\lamalquerida.jpg" />
+    <Content Include="images\lachancha.jpg" />
     <Content Include="images\drink-1.jpg" />
-    <Content Include="images\drink-2.jpg" />
+    <Content Include="images\lamañananoamanezco.jpg" />
     <Content Include="images\drink-3.jpg" />
-    <Content Include="images\drink-4.jpg" />
+    <Content Include="images\launamásyllamoamiex.jpg" />
     <Content Include="images\drink-5.jpg" />
     <Content Include="images\drink-6.jpg" />
-    <Content Include="images\drink-7.jpg" />
+    <Content Include="images\laluisbarquerovillalobos.jpg" />
     <Content Include="images\drink-8.jpg" />
     <Content Include="images\drink-9.jpg" />
     <Content Include="images\food.png" />
@@ -190,9 +220,9 @@
     <Content Include="images\pizza-2.jpg" />
     <Content Include="images\pizza-3.jpg" />
     <Content Include="images\pizza-4.jpg" />
-    <Content Include="images\pizza-5.jpg" />
-    <Content Include="images\pizza-6.jpg" />
-    <Content Include="images\pizza-7.jpg" />
+    <Content Include="images\lesegnine.jpg" />
+    <Content Include="images\lamaurizien.jpg" />
+    <Content Include="images\fetuchini.jpg" />
     <Content Include="images\pizza-8.jpg" />
     <Content Include="images\segninis pizza.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -223,6 +253,10 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="images\.DS_Store" />
+    <Content Include="Data_Files\pizzaMenu.json" />
+    <Content Include="Data_Files\drinksOnMenu.json" />
+    <Content Include="Data_Files\personalOrders.json" />
+    <Content Include="images\home Delivery.webp" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -233,6 +267,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -251,7 +286,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
